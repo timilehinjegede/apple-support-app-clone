@@ -36,8 +36,11 @@ class _AccountScreenState extends State<AccountScreen> {
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(40),
+                      image: DecorationImage(
+                        image: AssetImage('images/avatar.jpeg'),
+                        fit: BoxFit.cover
+                      )
                     ),
                   ),
                   SizedBox(height: 10,),

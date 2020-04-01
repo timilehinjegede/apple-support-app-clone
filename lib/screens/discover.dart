@@ -36,19 +36,19 @@ class DiscoverScreen extends StatelessWidget {
                 child: ListView(scrollDirection: Axis.horizontal, children: [
                   _collections(),
                   SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   _collections(),
                   SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   _collections(),
                   SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   _collections(),
                   SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   _collections()
                 ]),
@@ -64,17 +64,20 @@ class DiscoverScreen extends StatelessWidget {
               padding:
                   EdgeInsets.only(top: 5.0, left: 20.0, right: 20, bottom: 10),
               child: Container(
-                height: 200,
+                height: 210,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
                   borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage('images/hipx.png'),
+                    fit: BoxFit.contain
+                  )
                 ),
               ),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 5.0,
+                top: 20.0,
                 left: 20.0,
                 right: 20,
               ),
@@ -127,7 +130,8 @@ class DiscoverScreen extends StatelessWidget {
             color: Colors.grey,
             borderRadius: BorderRadius.circular(12),
             image: DecorationImage(
-              image: AssetImage('images/c0.jpg')
+              image: AssetImage('images/c2.jpg'),
+              fit: BoxFit.cover
             )
           ),
         ),
@@ -136,11 +140,11 @@ class DiscoverScreen extends StatelessWidget {
           left: 15,
           child: Text(
             'Collection',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
         Positioned(
-          top: 190,
+          top: 195,
           left: 15,
           child: Text(
             'Welcome to iOS 11',
@@ -149,10 +153,10 @@ class DiscoverScreen extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 215,
+          top: 220,
           left: 15,
           child: Text(
-            'For yout iPhone X',
+            'For your iPhone X',
             style: TextStyle(color: Colors.white),
           ),
         )

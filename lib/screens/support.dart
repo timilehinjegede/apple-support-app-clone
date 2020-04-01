@@ -28,7 +28,6 @@ class _SupportScreenState extends State<SupportScreen> {
             child: GestureDetector(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>SearchScreen()));
-                print('pushingggg');
               },
               child: Container(
                 height: 40,
@@ -68,15 +67,15 @@ class _SupportScreenState extends State<SupportScreen> {
             padding: const EdgeInsets.only(right:15.0,left: 15),
             child: Divider(color: Colors.black54,),
           ),
-          _buildItems("iPhone X", 'This iPhone X', 'imgPath'),
+          _buildItems("iPhone X", 'This iPhone X', 'images/ipx.png'),
           customDivider(),
-          _buildItems("Apple Watch Series 2", 'Paired Apple Watch Series 2', 'imgPath'),
+          _buildItems("Apple Watch Series 2", 'Paired Apple Watch Series 2', 'images/iw.png'),
           customDivider(),
-          _buildItems("Apple TV 4k", 'Apple TV 4k', 'imgPath'),
+          _buildItems("Apple TV 4k", 'Apple TV 4k', 'images/4ktv.png'),
           customDivider(),
-          _buildItems("iPad Pro", 'iPad Pro', 'imgPath'),
+          _buildItems("iPad Pro", 'iPad Pro', 'images/ipp.png'),
           customDivider(),
-          _buildItems("iPhone 7 Plus", 'iPhone 7 Plus', 'imgPath'),
+          _buildItems("iPhone 7 Plus", 'iPhone 7 Plus', 'images/ip7p.png'),
           customDivider(),
         ],
       ),
@@ -92,8 +91,8 @@ class _SupportScreenState extends State<SupportScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image(
-            height: 50,
-            width: 50,
+            height: 70,
+            width: 60,
             image: AssetImage(imgPath),
           ),
           SizedBox(width: 10,),
@@ -130,7 +129,7 @@ class _SupportScreenState extends State<SupportScreen> {
 
   Widget customDivider(){
     return Padding(
-      padding: const EdgeInsets.only(left: 35.0),
+      padding: const EdgeInsets.only(left: 80.0),
       child: Container(
         color: Colors.black12,
         height: 1,

@@ -41,9 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: _onItemTapped,
         backgroundColor: Colors.grey[200],
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
     );
   }
 
