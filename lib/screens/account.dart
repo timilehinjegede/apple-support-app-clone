@@ -56,7 +56,11 @@ class _AccountScreenState extends State<AccountScreen> {
               ),
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Scaffold.of(context).showSnackBar(SnackBar(
+                  content: Text('Recent History'),
+                ));
+              },
               child: Container(
                 padding: EdgeInsets.only(left: 10,right: 10),
                 height: 70,
@@ -91,7 +95,11 @@ class _AccountScreenState extends State<AccountScreen> {
               color: Colors.grey[200],
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Scaffold.of(context).showSnackBar(SnackBar(
+                  content: Text('Check Coverage'),
+                ));
+              },
               child: Container(
                 padding: EdgeInsets.only(left: 10,right: 10),
                 height: 70,
@@ -122,7 +130,11 @@ class _AccountScreenState extends State<AccountScreen> {
               ),
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Scaffold.of(context).showSnackBar(SnackBar(
+                  content: Text('Change Location'),
+                ));
+              },
               child: Container(
                 padding: EdgeInsets.only(left: 10,right: 10),
                 height: 70,
@@ -157,7 +169,11 @@ class _AccountScreenState extends State<AccountScreen> {
               color: Colors.grey[200],
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Scaffold.of(context).showSnackBar(SnackBar(
+                  content: Text('Submit Feedback'),
+                ));
+              },
               child: Container(
                 padding: EdgeInsets.only(left: 10,right: 10),
                 height: 70,

@@ -97,28 +97,35 @@ class _SupportScreenState extends State<SupportScreen> {
           ),
           SizedBox(width: 10,),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                    name,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500
+            child: GestureDetector(
+                onTap: (){
+                  Scaffold.of(context).showSnackBar(SnackBar(
+                    content: Text(name),
+                  ));
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                      name,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500
+                    ),
                   ),
-                ),
-                SizedBox(height: 5,),
-                Text(
-                    description,
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w500,
+                  SizedBox(height: 5,),
+                  Text(
+                      description,
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Icon(Icons.arrow_forward_ios, size: 16,color: Colors.grey,),
