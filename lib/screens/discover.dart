@@ -126,6 +126,9 @@ class DiscoverScreen extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.grey,
             borderRadius: BorderRadius.circular(12),
+            image: DecorationImage(
+              image: AssetImage('images/c0.jpg')
+            )
           ),
         ),
         Positioned(
