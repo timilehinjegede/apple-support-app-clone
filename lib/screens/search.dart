@@ -9,21 +9,10 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
 
   String dropDownValue = 'iPhone 7 Plus';
-  final searchTextEditingController = TextEditingController();
+  var filteredSearch = Results.getAll().length;
+  String text;
 
-  void initState() {
-    searchTextEditingController.addListener(() {
-      final text = searchTextEditingController.text.toLowerCase();
-      print(text);
-    });
-    super.initState();
-  }
-
-  void dispose() {
-    searchTextEditingController.dispose();
-    super.dispose();
-  }
-
+  List<Results> myList = Results.getAll();
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +33,15 @@ class _SearchScreenState extends State<SearchScreen> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey[300],
                       ),
-                      child: TextFormField(
-                        controller: searchTextEditingController,
+                      child: TextField(
+                        onChanged: (string){
+                          setState(() {
+                            myList = Results.getAll().where((element) =>
+                            (element.title.toLowerCase().contains(string.toLowerCase()) ||
+                                element.description.toLowerCase().contains(string.toLowerCase())
+                            )).toList();
+                          });
+                        },
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Search',
@@ -122,7 +118,7 @@ class _SearchScreenState extends State<SearchScreen> {
             Container(
               height: MediaQuery.of(context).size.height ,
               child: ListView.builder(
-                itemCount: Results.getAll().length,
+                itemCount: myList.length,
                 itemBuilder: (context,index){
                   return Column(
                     children: <Widget>[
