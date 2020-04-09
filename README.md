@@ -2,6 +2,12 @@
 
 A new Flutter application.
 
+![Discover Screen](screenshots/discover.png) ![Support Screen](screenshots/support.png)
+
+![Account Screen](screenshots/account.png) ![Search Screen](screenshots/search.png)
+
+![Search Results Screen](screenshots/results.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
