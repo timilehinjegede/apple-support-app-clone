@@ -2,10 +2,19 @@
 
 A new Flutter application.
 
-![Discover Screen](screenshots/discover.png) ![Support Screen](screenshots/support.png)
+# Discover Screen
+![Discover Screen](screenshots/discover.png) 
 
-![Account Screen](screenshots/account.png) ![Search Screen](screenshots/search.png)
+# Support Screen
+![Support Screen](screenshots/support.png)
 
+# Account Screen
+![Account Screen](screenshots/account.png) 
+
+# Search Screen
+![Search Screen](screenshots/search.png)
+
+# Search Results Screen
 ![Search Results Screen](screenshots/results.png)
 
 ## Getting Started
